@@ -1,0 +1,264 @@
+.container {
+  min-height: 100vh;
+  background-image: url('/c1/carrossel1.png'); /* imagem do fundo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: sans-serif;
+}
+
+
+/* NAVBAR */
+.navbar {
+  background-color: #521e1e;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px; /* <-- Altura fixa definida aqui */
+  position: sticky; /* opcional: mantém ela visível ao rolar */
+  top: 0;
+  z-index: 1000; /* garante que fique sobre os outros elementos */
+}
+
+.navbarIcon {
+  width: 30px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* HERO */
+.hero {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBackground {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: background-image 1s ease-in-out; /* SUAVIDADE NO CARROSSEL */
+}
+
+
+.heroOverlay {
+  background-color: rgba(0, 0, 0, 0.4); /* escurece a imagem para dar contraste */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 1.5rem;
+}
+
+
+.heroText {
+  background-color: rgba(249, 244, 227, 0.567);
+  padding: 1px;
+  border-radius: 10px;
+  max-width: 700vh;
+  color: #630202;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+}
+
+/* BOTÕES COM ÍCONES */
+.section {
+  background-color: #f5eee6;
+  color: #000;
+  height: 420px;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.iconSection {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.iconButton {
+  background-color: #7e3a3a;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  overflow: hidden;
+  position: relative;
+  flex-direction: row;
+  transition: all 0.5s ease;
+}
+
+.iconButton:hover {
+  transform: scale(1.05);
+}
+
+.buttonLabel {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s ease;
+  color: black;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  font-family: 'Cinzel', serif;
+}
+
+/* Botão Ativo */
+.ativo {
+  background-color: #521e1e;
+  flex-direction: column;
+  height: auto;
+  padding: 20px 15px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.ativo .iconImage {
+  width: 60px;
+  height: 90px;
+  margin-bottom: 8px;
+}
+
+.buttonText {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #fdf3e3;
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+}
+
+/* Animação */
+.iconButton:hover .iconImage {
+  transform: translateX(-40%);
+}
+
+.iconButton:hover .buttonLabel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.iconImage {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* COLABORADORES */
+.colaboradores {
+  background-color: #f5eee6;
+  padding: 2rem 1rem;
+  text-align: center;
+  height: 65vh;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+}
+
+.colaboradores h2 {
+  margin-bottom: 1.5rem;
+  color: #630000;
+  font-family: 'Cinzel', serif;
+}
+
+.names {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.person {
+  display: flex;
+  align-items: center;     
+  justify-content: center; 
+  text-align: center;      
+  padding: 10px;
+  gap: 8px;                
+  width: 40vh;
+  height: 120px;
+  background-color: #630202; 
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #3c1d1d;
+  color: white;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  min-height: 150px;
+}
+
+
+.footerLeft {
+  flex: 0 0 auto;
+}
+
+.footerLogoImage {
+  width: 100px;
+  height: auto;
+}
+
+.footerCenter {
+  flex: 1;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.footerCenter strong {
+  font-size: 25px;
+}
+
+.footerRight {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  display: flex;
+  gap: 25px;
+}
+
+.socialIcon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  
+}
+
+.socialIcon:hover {
+  transform: scale(1.1);
+}
+
